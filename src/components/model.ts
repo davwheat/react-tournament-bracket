@@ -1,45 +1,45 @@
 export enum Side {
   HOME = 'home',
-  VISITOR = 'visitor'
+  VISITOR = 'visitor',
 }
 
-export type ID = string;
+export type ID = string
 
 export interface SideInfo {
   score?: {
-    score: number;
-  };
+    score: number
+  }
 
   seed?: {
-    displayName: string;
-    rank: number;
-    sourceGame: Game;
-    sourcePool: object;
-  };
+    displayName: string
+    rank: number
+    sourceGame: Game
+    sourcePool: object
+  }
 
   team?: {
-    id: ID;
-    name: string;
+    id: ID
+    name: string
   }
 }
 
 export interface Game {
-  id: ID;
+  id: ID
   // the game name
-  name: string;
+  name: string
   // optional: the label for the game within the bracket, e.g. Gold Finals, Silver Semi-Finals
-  bracketLabel?: string;
+  bracketLabel?: string
   // the unix timestamp of the game-will be transformed to a human-readable time using momentjs
-  scheduled: number;
+  scheduled: number
 
   court?: {
-    name: string;
+    name: string
     venue: {
       name: string
     }
-  };
+  }
 
   sides: {
     [side in Side]: SideInfo
-  };
+  }
 }

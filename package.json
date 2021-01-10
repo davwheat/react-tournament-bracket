@@ -7,7 +7,8 @@
   "scripts": {
     "test": "mocha --require ts-node/register src/**/*.test.tsx",
     "build": "rimraf lib && tsc",
-    "prepublish": "npm test && npm run build"
+    "prepublish": "npm test && npm run build",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "files": [
     "lib"
@@ -36,23 +37,24 @@
   "homepage": "https://github.com/moodysalem/react-tournament-bracket#readme",
   "dependencies": {
     "react-controllables": "^0.6.0",
-    "underscore": "^1.9.0",
-    "uuid": "^3.2.1"
+    "underscore": "^1.12.0",
+    "uuid": "^8.3.2"
   },
   "peerDependencies": {
     "react": "*"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.0",
+    "@types/mocha": "^8.2.0",
     "@types/moment": "^2.13.0",
-    "@types/react": "^16.3.13",
-    "@types/rimraf": "^2.0.2",
-    "@types/underscore": "^1.8.8",
-    "@types/uuid": "^3.4.3",
-    "mocha": "^5.1.1",
-    "react": "^16.3.2",
-    "rimraf": "^2.6.2",
-    "ts-node": "^6.0.2",
-    "typescript": "^2.8.3"
+    "@types/react": "^17.0.0",
+    "@types/rimraf": "^3.0.0",
+    "@types/underscore": "^1.10.24",
+    "@types/uuid": "^8.3.0",
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   }
 }

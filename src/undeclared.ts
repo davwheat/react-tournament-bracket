@@ -1,1 +1,1 @@
-declare module 'react-controllables';
+declare module 'react-controllables'
